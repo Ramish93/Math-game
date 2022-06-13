@@ -1,22 +1,34 @@
+var Player = (function () {
+    function Player() {
+    }
+    Player.prototype.formatName = function () {
+        return this.name.toUpperCase();
+    };
+    return Player;
+}());
 function startGame() {
-    let name = getInputV('playername');
+    var name = getInputV('playername');
     logPlayer(name);
-    // starting a new game
     postScore(100, name);
 }
-const logPlayer = (name = 'Multimath player') => {
-    console.log(`${name}`);
+var logPlayer = function (name) {
+    if (name === void 0) { name = 'Multimath player'; }
+    console.log("".concat(name));
 };
-const getInputV = (id) => {
-    const inputElement = document.getElementById(id);
+var getInputV = function (id) {
+    var inputElement = document.getElementById(id);
     if (inputElement.value === '') {
         return undefined;
     }
     return inputElement.value;
 };
-const postScore = (score, playerName = 'Multimath player') => {
-    const scoreE = document.getElementById('postedScores');
-    scoreE.innerText = `${playerName} - ${score}`;
+var postScore = function (score, playerName) {
+    if (playerName === void 0) { playerName = 'Multimath player'; }
+    var scoreE = document.getElementById('postedScores');
+    scoreE.innerText = "".concat(playerName, " - ").concat(score);
 };
 document.getElementById('startGame').addEventListener('click', startGame);
+var firstPlayer = new Player();
+firstPlayer.name = 'ramish';
+console.log(firstPlayer.formatName());
 //# sourceMappingURL=app.js.map

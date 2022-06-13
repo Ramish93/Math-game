@@ -1,3 +1,5 @@
+/// <reference path="player.ts" />
+
 function startGame() {
   let name:string | undefined = getInputV('playername');
   logPlayer(name);
@@ -23,3 +25,7 @@ const postScore= (score:number, playerName:string = 'Multimath player'): void =>
 }
 
 document.getElementById('startGame')!.addEventListener('click', startGame);
+
+const firstPlayer: Player = new Player();
+firstPlayer.name = 'ramish'
+console.log(firstPlayer.formatName())
