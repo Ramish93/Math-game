@@ -1,5 +1,5 @@
-import {Result} from './result'
 
+import {Result} from './result'
 
 export class Scoreboard {
 
@@ -7,6 +7,7 @@ export class Scoreboard {
   
     addResult(newResult: Result): void {
       this.results.push(newResult);
+      
     }
   
     updateScoreboard(): void {
