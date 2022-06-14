@@ -1,4 +1,4 @@
-import {person } from 'person'
+import {Person } from './person'
 
 export class Player implements Person {
     name: string;
