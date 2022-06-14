@@ -1,10 +1,13 @@
 {
     "extends": "../tsconfig.base",
-    "compilerOptions":{
-        "removeComments": true,
-        "outFile": "../js/app.js"
+    "compilerOptions": {
+      "removeComments": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "traceResolution": true
     },
-   "files": [
-       "./app.ts"
-   ]
-}
+    "files": [
+      "./app.ts"
+    ]
+  }
+  
